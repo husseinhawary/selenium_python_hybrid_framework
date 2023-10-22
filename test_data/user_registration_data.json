@@ -1,0 +1,16 @@
+{
+  "first_name": "Hussein",
+  "last_name": "Elhawary",
+  "telephone": "1234567890",
+  "email_already_exists": "test.test123@gmail.com",
+  "password": "123456",
+  "confirm_password": "123456",
+  "select_news_letter": {
+    "yes": "yes",
+    "no": "no"
+  },
+  "select_privacy_policy": {
+    "select": "select",
+    "no": "no"
+  }
+}
