@@ -23,9 +23,11 @@ jobs:
 
       - name: Run tests
         run: pytest -vs --browser=chrome-headless -n 3 --alluredir ./allure-results --clean-alluredir
+      - name: Generate Allure HTML report
+        run: allure generate allure-results
 
-      - name: Upload Allure report
+      - name: Upload Allure HTML report
         uses: actions/upload-artifact@v3
         with:
-          name: allure-report
-          path: allure-results
+          name: allure-report-html
+          path: allure-results/index.html
