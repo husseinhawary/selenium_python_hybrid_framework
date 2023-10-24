@@ -90,9 +90,7 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: Run tests
-        run: |
-          mkdir -p reports
-          pytest -vs --browser=chrome-headless -n 3 --html=reports/report.html
+        run: pytest -vs --browser=chrome-headless -n 3 --html=reports/report.html
 
       - name: Set output
         if: success() || failure()
@@ -101,6 +99,7 @@ jobs:
 
       - name: Upload Allure report
         uses: actions/upload-artifact@v3
+        if: success() || failure()
         with:
           name: test-report
           path: ${{ steps.results.outputs.artifactPath }}
