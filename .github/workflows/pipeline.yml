@@ -90,7 +90,7 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: Run tests
-        run: pytest -vs --browser=chrome-headless -n 3 --alluredir ./allure-results --clean-alluredir
+        run: pytest -vs --browser=chrome-headless -n 3 --html=reports/report.html
 
       - name: Upload Allure report
         uses: actions/upload-artifact@v3
