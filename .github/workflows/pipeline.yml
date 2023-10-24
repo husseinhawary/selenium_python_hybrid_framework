@@ -28,8 +28,8 @@ jobs:
         if: success() || failure()
       - run: | 
           mkdir -p reports
-#          pytest -vs --browser=chrome-headless -n 3 --alluredir ./allure-results --clean-alluredir
-          pytest -vs --browser=chrome-headless -n 3 --html=reports/report.html
+          pytest -vs --browser=chrome-headless -n 3 --alluredir ./allure-results --clean-alluredir
+#          pytest -vs --browser=chrome-headless -n 3 --html=reports/report.html
       - name: Set output
         if: success() || failure()
         id: results
