@@ -30,10 +30,10 @@ jobs:
           mkdir -p reports
           pytest -vs --browser=chrome-headless -n 3 --alluredir ./allure-results --clean-alluredir
 #          pytest -vs --browser=chrome-headless -n 3 --html=reports/report.html
-      - name: Set output
-        if: success() || failure()
-        id: results
-        run: echo "artifactPath=reports/" >> $GITHUB_OUTPUT
+#      - name: Set output
+#        if: success() || failure()
+#        id: results
+#        run: echo "artifactPath=reports/" >> $GITHUB_OUTPUT
 
 #      - uses: actions/upload-artifact@v3
 #        if: success() || failure()
