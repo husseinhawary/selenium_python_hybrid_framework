@@ -27,7 +27,7 @@ jobs:
       - uses: actions/checkout@v3
         if: success() || failure()
       - run: | 
-          mkdir -p reports
+#          mkdir -p reports
           pytest -vs --browser=chrome-headless -n 3 --alluredir ./allure-results --clean-alluredir
 #          pytest -vs --browser=chrome-headless -n 3 --html=reports/report.html
 #      - name: Set output
