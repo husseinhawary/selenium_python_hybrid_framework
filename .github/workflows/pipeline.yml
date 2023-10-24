@@ -35,11 +35,11 @@ jobs:
         id: results
         run: echo "artifactPath=reports/" >> $GITHUB_OUTPUT
 
-      - uses: actions/upload-artifact@v3
-        if: success() || failure()
-        with:
-          name: test-report
-          path: ${{ steps.results.outputs.artifactPath }}
+#      - uses: actions/upload-artifact@v3
+#        if: success() || failure()
+#        with:
+#          name: test-report
+#          path: ${{ steps.results.outputs.artifactPath }}
 
 #      - name: Generate Allure HTML report
 #        run: allure generate allure-results
